@@ -1,0 +1,39 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .gallery-wrapper{
+    display: flex;
+    border: 1px solid #ddd;
+    width: 40%;
+    height: 60%;
+    max-width: 1200px;
+}
+.img-wrap{
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-wrap img{
+    max-width: 80%;
+    max-height: 80%;
+}
+.thumb-wrap{
+    flex: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    overflow-y: auto;
+}
+.thumb-wrap .thumb{
+    flex: auto;
+    width: 100%;
+    padding: 5% 10%;
+}
+.thumb-wrap .thumb img{
+    width: 100%;
+}

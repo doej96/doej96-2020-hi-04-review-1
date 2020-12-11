@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex를 배워보자</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .wrapper{
+            border: 10px solid red;
+            max-width: 1200px;
+            margin: auto;
+            height: 300px;
+            padding: 2em; /* display:block은 width:100%임 */
+            display: flex; /* flex는 부모에, 부모 안에 어떻게 정렬되는지 */
+            /* 가로정렬 */
+            justify-content: flex-start; /* space-between: 반응형일 때 안좋음 */
+            /* 세로정렬 */
+            align-items: center; /* stretch: 아무값도 주지않은 box에 최대값 적용, baseline: 내용을 기준으로 가운데 정렬 */
+            flex-wrap: nowrap; /* 넘치는것(wrap) 없음, 브라우저 크기 줄어들면 .box 크기 같이 줄어듦 */
+            flex-direction: row;
+            align-content: flex-end;
+        }
+        .box{
+            border:2px solid blue;
+            padding: 0.5em;
+            margin: auto;
+            width: 100px;
+            height: 50px;
+            flex-grow: 1; /* 기본값:0 */
+            flex-shrink: 1; /* 기본값:1, 0(false)주면 자동으로 줄어들지 않고 넘침 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">BOX1</div>
+        <div class="box">BOX2</div>
+        <div class="box">BOX3</div>
+        <div class="box">BOX4</div>
+        <div class="box">BOX5</div>
+        <div class="box">BOX6</div>
+        <div class="box">BOX7</div>
+        <div class="box">BOX8</div>
+        <div class="box">BOX9</div>
+        <div class="box">BOX10</div>
+    </div>
+</body>
+</html>
